@@ -1,10 +1,44 @@
 % \begin{comment}
 \documentclass{book}
 \usepackage{master}
+\usepackage{changepage}
 \newcommand{\rec}{$\text{R\'ecoltes et Semailles}$}
 \newcommand{\no}{n$^\circ$}
 \hfuzz = 100pt
+
+% NOTE and SUBNOTE FORMATTING
+\usepackage{titlesec}
+\usepackage[dotinlabels]{titletoc}
+
+% define `note'
+\titleclass{\nnote}{straight}[\section]
+\newcounter{nnote}
+\renewcommand{\thennote}{\thesection.\arabic{nnote}}
+\titlespacing*{\nnote}{0pt}{3.5ex plus 1ex minus .2ex}{1ex plus .2ex}
+\titleformat{\nnote}[runin]{\bfseries }{\bfseries Note }{0pt}{}[]
+
+% define `subnote'
+\titleclass{\subnote}{straight}[\section]
+\newcounter{subnote}
+\renewcommand{\thesubnote}{\thesection.\arabic{subnote}}
+\titlespacing*{\subnote}{0pt}{3.5ex plus 1ex minus .2ex}{1ex plus .2ex}
+\titleformat{\subnote}[runin]{\bfseries }{\bfseries Note }{0pt}{}[]
+
+% the first optional arg sets the size of the indentation in the TOC
+\titlecontents{nnote}[9em]
+{}{Note }{}{\titlerule*[1pc]{.}\contentspage}
+
+% the first optional arg sets the size of the indentation in the TOC
+\titlecontents{subnote}[11em]
+{}{Note }{}{\titlerule*[1pc]{.}\contentspage}
+
 \begin{document}
+% print table of contents with notes and subnotes
+\setcounter{tocdepth}{5}
+\setcounter{secnumdepth}{5}
+\startcontents[chapters]
+\printcontents[chapters]{}{0}{}
+
 % \end{comment}
 
 \setcounter{chapter}{12}
@@ -14,20 +48,21 @@
 
 \subsection{Failure of an instruction (II) - or creation and fatuity}
 
-\textbf{Note} 44' [This note was mentioned in section 50 of
+\nnote{44'}
+[This note was mentioned in section 50 of
 \textbf{VIII The solitary journey} of part \textbf{(I)
 Fatuity and renewal} p. 227]
 
 \marginpar{p. 173}
 This passage ``clicked'' for the friend who read the previous section ``the weight of a
-past''\footnote{(*) (May 10th) This friend is none other than Zoghman Mebkhout, who
+past''\footnote{(*) (May 10) This friend is none other than Zoghman Mebkhout, who
 authorized me to reveal his identity, after I thought I should keep it secret upon first
 writing this letter (on April 2nd 1984).}(*) He wrote: ``for many of your old students,
 the aspect, as you put it, of an invasive and borderline destructive ``boss'' remains
 strong. Whence the impression you hold.'' (Namely, I presume, the 
 ``impression'' which is expressed in certain passages of this section as well as in the
-notes
-\no 46, 47, 50 which complete it.)
+Notes
+\no \nameref{note:46}, \nameref{note:47}, \nameref{note:50} which complete it.)
 Earlier, he writes: ``first of all I think that you did well to leave mathematics for an
 instant [!]. Because there was a kind of incomprehension between you and your students,
 except of course for Deligne. They were left a bit dumbfounded\ldots''. 
@@ -37,7 +72,7 @@ pre 1970, beyond customary compliments!
 Even earlier in the same letter: ``\ldots I have come to realize that your old students 
 [namely: those from ``before 1970''] do not really know what a mathematical
 \textbf{creation} is, perhaps in part because of you\ldots it must be said that in their
-time, the problems were clear-cut\ldots'' \footnote{(**) (May 10th) The preceding citation
+time, the problems were clear-cut\ldots'' \footnote{(**) (May 10) The preceding citation
 was heavily modified, in order to respect the anonymity of my correspondent. See the
 following note for a complete citation of the relevant passage, as well as for a
 commentary on its real meaning, which I had missed at first due to a lack of further
@@ -66,8 +101,373 @@ of something more delicate and essential than a mere result''.
 If I see certain ex-students of mine treating this valuable thing with disdain, 
 letting grow within them
 this ``snobbery'' which J.H.C. Whitehead talked about (consisting of disparaging 
-what is ``immediately provable'')\footnote{(*)See the note (the snobbery of the youth - or
-the defenders of purity), \no 27 p. 247.}(*), 
+what is ``immediately provable'')\footnote{(*)See the 
+note (the snobbery of the youth - or the defenders of purity), \no 27 p. 247.
+}(*), 
 I am at least party to blame, for various reasons. 
+
+
+However, I would not go as far as saying that the work which I suggested to my students, or which they produced with me, was of a purely technical nature, strictly a matter of routine, or inept to using their creative faculties. I offered them some starting points which were tangible and sound, among which they were free to choose, and from which they could launch further, just as I had done before them. I do not think I ever suggested a topic to a student which I would not have been happy to work on myself; nor was any of the journeys which they underwent with me more arid than what I have weathered over the course of my mathematical life, without loosing hope or kicking over the traces, when it was clear that the work had to be done and that there was no way around it. 
+
+\marginpar{p. 175}Thus, it seems to me that the failure that I am today confronting rests on subtler causes than the kind of themes which I suggested, or the extent to which said themes remained nebulous or were clearly delineated. My role in this failure seems due rather to attitudes of fatuity within me, in the way I interacted with mathematics; attitudes which I have examined in the course of this reflection. These attitudes were bound to more or less strongly influence, if not the work itself with a given student, at least the atmosphere surrounding my person. Fatuity, even when expressed in the most ``discreet" way possible, always points towards close-mindedness, towards insensibility to the delicate essence of things and to their inherent beauty - whether these be ``mathematical things", or breathing individuals whom we can welcome and encourage, but also towards whom we can look down from our lofty seat, oblivious to the aura that surrounds us and to the destructive impact it can have on others and on ourselves.
+
+\subsection{A sentiment of injustice and powerlessness}
+
+\nnote{44''} [The appearance of this note does not align with the chronological order of writing]
+
+(May 10) Following my friend's authorization to freely cite excerpts from his work which I may deem useful, I hereby include a more thorough citation\footnote{(*) See second footnote of the preceding note - ``Failure of an instruction - or creation and fatuity", n$^o$44'.}(*), which situates the earlier truncated citation in its proper context:
+
+\begin{adjustwidth}{1cm}{}
+``It is true that I underwent a period of isolation between the years 1975 and 1980, except for rare questions to Verdier. But I don't blame your old students for that period, because nobody then really understood the importance of this connection [read: between discrete coefficients and continuous coefficients]. Everything changed in October 1980, when the first highly important application of this connection was found to the theory of semisimple groups, namely the discovery of the Kazhdan-Lusztig multiplicity formula, which used in an essential way the equivalence of categories in question. This equivalence took on the name of ``Riemann-Hilbert correspondence" without further comment - after all, it is so natural! This is when I understood that your old students do not really know what a mathematical \textbf{creation} is, and that perhaps you shared some of the responsibility for this. I still to this day feel a sentiment of injustice and powerlessness. It is true that at the time the problems were already set in stone. The number of applications of this theorem is impressive, in the context of \'etale topology as well as in the transcendantal context, where it still carries the name of Riemann-Hilbert! I am under the impression that my name is unworthy of this result for\marginpar{p. 176} many people, including your old students. But as you can see clearly in the introduction to my work, it is your ``duality" formalism which leads naturally to the result. Like you, I am not worried about the future relevance of this connection between ``discrete constructible coefficients" and crystalline coefficients (or holonomic $\mathcal{D}$-modules). It is clearly applicable to several domains, in the cohomology of spaces as well as in analysis."
+\end{adjustwidth}
+
+The above segment from my friend's letter inspired (in addition to the present note) the
+later note ``The anonymous worker and the God-given theorem". Based on the letter's
+language, I had not realized (what I am now explaining in his stead) that this ``sentiment
+of injustice and powerlessness" felt by my friend were a reaction, not only to an attitude
+of disdain which systematically \textbf{minimized} his contributions (an attitude that
+eventually became familiar in some of my old students), but also to a full-fledged
+operation of embezzlement, consisting in outright \textbf{retracting} the authorship of a
+key theorem. This situation only became clear to me eight days ago - see regarding this
+subject the note ``Unfairness - or a feeling of return" and the subsequent Notes (n$^o$'s
+% \nameref{note:75} to \nameref{note:80}),
+% \todo
+collected under the title "The Colloquium - of Mebkhout's sheaves and Perversity".
+
+\nnote{45} As a result of the changes in my environment and lifestyle, occasions to meet with or otherwise contact my old friends have become rare. The fact remains that many signs of an attitude of "distancing away" have appeared, more or less pronounced depending on the person. However, some people such as Dieudonn\'e, Cartan, or Schwartz - in fact, all of the ``elders" who had warmly welcomed me in my first years, have conveyed nothing of the sort. Other than them, I sometimes feel that there are very few people among my old friends or students in the mathematical community with whom my relationship (whether or not it finds the occasion to be expressed) has not become divided, ``ambivalent", following my departure from what was once a shared milieu, a common world.
+
+\section{13.2. II The orphans}
+
+\subsection{13.2.1. My orphans}
+
+\nnote{46}\label{note:46}
+[This note was mentioned in section 50 of chapter \textbf{VIII The solitary journey} of
+part \textbf{I (Fatuity and Renewal)}
+% \todo{ref}
+]
+
+\marginpar{p. 177}
+I would like to take the time to say a few words concerning the mathematical notions and
+ideas, among those which I have brought to life, which seem (by far) to be the farthest
+reaching.(\nameref{note:46.1})\footnote{(*)Notes \no \nameref{note:46.1} through 
+\nameref{note:46.9} contain more technical
+commentaries on the notions reviewed in the present note. In addition, independently from
+the particular \textbf{notions} which I have introduced, the reader will also find reflections
+regarding what I consider to be the ``core'' of my work (within the collection of work
+which I have ``entirely finalized'') in note \no $88$ ``The remains''.}(*)
+I will be mostly speaking about five closely linked key-notions, 
+which I will briefly review in increasing order of specificity, richness, and depth.
+
+The first idea in question is that of \textbf{derived categories} in homological algebra
+(cf. note 48 p. 274), and of their use as a ``catch-all'' formalism called the 
+``\textbf{six operations formalism}''
+(namely $\tp^L$, $Lf^*$ , $Rf_!$ , $R\under{\Hom}$, $Rf_*$, $Lf^!$)
+($46_2$) on the cohomology of the most important kinds of ``spaces'' introduced to this
+day in geometry: ``algebraic'' spaces (such as schemes, schematic
+multiplicities\todo{fix}, etc \ldots), analytic spaces (i.e. complex analytic as well as
+rigid analytic, and assimilated), topological spaces (``tempered spaces'', pending the context
+of tempered spaces of all kinds and surely many others, such as that of the category
+($\Cat$) of small categories, serving as homotopical models\ldots).
+this formalism accommodates both discrete and ``continuous'' coefficients.
+
+The progressive discovery of this duality formalism 
+and of its ubiquitousness 
+happened through a solitary, persistent, and exacting reflection which took place between
+the years 1956 and 1963.
+It was during the course of this reflection that the notion of derived category slowly
+appeared, and with it an understanding of the role which it played in homological algebra. 
+
+What was still missing from my vision of the cohomological formalism of ``spaces'' was an
+understanding of the link which one could conjecture between discrete and continuous
+coefficients, beyond the familiar case of local systems 
+\marginpar{p. 178}
+and their interpretation as
+modules with a flat connection, or as modules of crystals. 
+This profound link, first formulated in the context of complex analytic spaces was
+discovered and established (almost 20 years later) by Zoghman Mebkhout,
+in terms of derived categories obtained on the one hand using ``constructible''
+coefficients, and on the other hand the notion of ``$\cD$-modules''
+of ``complexes of differential operators'' (cf. note $46_3$ p.).
+% \todo
+
+For almost $10$ years, in the absence of the encouragement of those among my old students
+who were best positioned to offer it, and to support him through their interest and their
+experience which they had gained through their work with me. 
+Zoghman Mebkhout produced his remarkable work in a near total state of isolation. 
+This did not prevent him from discovering and proving two key theorems\footnote{(*) (June
+7th) Mebkhout mentioned to me that in addition to these two theorems, I should be
+mentioning a third, also expressed in the language of derived categories, namely what he
+has called (perhaps a bit improperly) the theorem of biduality for $\cD$-modules, which
+was the hardest of the three. For a sketch of the of Mebkhout's ideas and results, and of
+their applications, see
+Le Dung Trang et Zoghman Mebkhout, Introduction to linear differential Systems, Proc. of
+Symposia in Pure Mathematics, vol.40 (1983) part.2, p. 31-63.
+}(*)
+in the context of a
+new crystalline theory which was slowly coming into being 
+in the midst of a general indifference.
+Both theorems
+were expressed in the language of derived categories
+(decidedly not a crowd-pleasing topic!): one provided the equivalence of categories
+mentioned earlier between ``discrete constructible'' coefficients and crystalline coefficients
+(subject to certain conditions of ``holonomicity'' and ``regularity'')
+and the other was ``\textbf{the}'' theorem of global crystalline duality for the constant morphism
+from a smooth complex analytic space (not necessarily compact, thus involving significant
+additional technical difficulties) to a point.
+Both are profound theorems,\footnote{(**)(May 30th) The proof of the second theorem
+required dealing with the usual technical difficulties of the transcendental context,
+involving the recourse to ``\'ev\`etesque'' techniques whence my guess that it ranks among
+``difficult'' demonstrations. The proof of the first theorem is ``evident'' and profound,
+using the full force of
+Hironaka's theorem for the resolution of singularities. As I mention in the penultimate
+paragraph of the note ``solidarity'' (\no 85), once the theorem is formulated, 
+``anybody'' in the loop would be able to prove it. Compare also with J.H.C. Whitehead's
+observation quoted in the
+note ``The snobbery of the youth - or the defenders of purity'', (\no 27).
+I wrote the latter note as if under the silent dictation of a secret prescience as of yet
+not realizing the extent to which the reality was going to surpass my shy and fumbling
+suggestions!}(**)
+which provide a renewed 
+\marginpar{p. 179}
+understanding of the cohomology of both analytic as well as
+(in characteristic $0$ for now) algebraic spaces, and as such they carry the promise of a
+far-reaching renewal of the cohomological theory of these spaces.
+They finally earned the author, following two consecutive denials of job application at
+the CNRS, a post of research fellow
+(equivalent to a post of assistant or master-assistant at a university).
+
+Nobody during these ten years cared to tell Mebkhout, while
+he was wrestling
+with the significant technical difficulties involved with the transcendental context, 
+about the ``formalism of the six variances'', well known by my students\footnote{(*) They
+learned it first-hand from the seminars SGA 4 and SGA 5, as well as through the
+intervening text ``Residues and Duality'' of R. Hartshorne.}(*), but nowhere to be
+found ``written up''.
+He finally learned about its existence from me last year 
+(in the form of a note, which I was apparently the only one to know about\ldots),
+when he kindly and patiently took the time to explain his work to me, even thought I was
+out of practice with cohomology\ldots
+Neither did anybody think to suggest to him that it may be more ``profitable'' to first
+to first focus on the context of schemes in characteristic $0$, where the difficulties
+inherent to the transcendental context disappear, while on the other hand the conceptual
+questions fundamental to the theory appear just as clearly. 
+Nobody thought to mention 
+(or even perceived
+what I have known ever since I introduced crystals\footnote{(**) (May 30) Something
+which I have since forgotten - only to remember it during my second meeting with Mebkhout
+last year (see the note ``Meeting from the grave'', \no 78).}(**))
+that ``$\cD$-modules'' on smooth (analytic or algebraic) spaces are precisely the same
+thing as ``\textbf{modules of crystals}'' (once we put aside matters of ``coherence'' for
+either of these notions), and that the latter is a versatile notion which works just as
+well for ``spaces'' with arbitrary singularities, as it does for smooth spaces ($46_4$).
+
+In view of the aptitudes (and the rare courage) displayed by Mebkhout it is clear to me
+that had he evolved in a sympathetic atmosphere, he would have painlessly and even 
+with pleasure established the complete formalism of ``the six variances'' in the context
+of crystalline cohomology of schemes in characteristic zero, at a time where all of the
+essential ideas for a program of such scope
+(including his own, and those of Sato's school and my own)
+were already in place, or so it seems to me.
+For someone of his caliber, this could have been done in the span of a few years, 
+just like the development of the catch-all formalism 
+\marginpar{p. 180}
+of \'etale cohomology a few years
+earlier (1962-1965), given that the guiding framework of the six-operations was already
+known (in addition to the two key theorems of base change).
+It is true that these years were marked by a flow of enthusiasm and sympathy 
+from participants and witnesses, as opposed to a work going upstream relative to the
+haughty self-importance of those in charge\ldots
+
+I now come to the second pair of notions, namely that of 
+\textbf{schemes} and the tightly related notion of \textbf{topoi}.
+The latter is a more intrinsic version of the notion of \textbf{site}, which I introduced in order
+to formalize the topological intuition of ``localization''.
+(The term ``site'' was introduced later Jean Giraud, who greatly contributed by
+providing the notions of site and topos with the necessary flexibility.) 
+I was led to introduce the notions of scheme and topos one after another in response to
+the glaring needs of algebraic geometry. 
+This pair of concepts carried within them the potential for a profound renewal of both algebraic and
+arithmetic geometry and of topology, through a \textbf{synthesis} of these ``worlds'',
+kept apart for too long, within a common geometric intuition.
+
+The renewal of algebraic and arithmetic geometry through the viewpoint of schemes and the
+language of sites (or of ``descent''), carried over the course of twelve years of
+foundational work (in addition to the work of my students and other participants of good
+faith) has been well-established for twenty years; 
+the notion of scheme, and that of \'etale cohomology of schemes (if not that of \'etale
+topos and \'etale multiplicity) have finally become customary, and have entered 
+the common patrimony. 
+
+On the other hand, this vast synthesis that would also encompass topology
+is still biding its time, even though
+the essential ideas and principal technical tools
+appear to have been in place\footnote{(*) (May 15) The aforementioned ``essential ideas
+and principal technical tools" were assembled in the vast fresco of seminaries SGA 4 and
+SGA 5 between 1963 and 1965. The strange vicissitudes that affected the writing and
+publication of the SGA 5 component of this fresco, which only appeared (unrecognizable,
+ravaged) eleven years later (in 1977) illustrated what happened to the enveloping vision
+at the hands of a ``certain trend" - or rather, at the hands of certain of my students who
+were first to instaure it (see following footnote). These vicissitudes and their meaning
+have been progressively revealed over the course of the past four weeks of reflection,
+continued in the notes ``The accomplice", ``Clean slate", ``The singular being", ``The
+signal". ``The reversal", ``Silence", ``Solidarity", ``Mystification", ``The deceased",
+``The massacre", ``The remains", n$^o$s 63'", 67, 67', 68, 68', 84-88.}(*) for twenty years. 
+During the\marginpar{p. 181} fifteen years that followed my departure from the world of mathematics, the
+fertile unifying idea and powerful tool for discovery that is the notion of topoi has been
+maintained by some customary decree\footnote{(*) (May 14)The continuation of my reflection during the six weeks that followed
+the writing of these lines (in late March) revealed this ``trend" which was established in
+the first place by certain of my students - the very students who were best positioned to
+make theirs a certain vision, as well as a range of ideas and technical tools, and who
+chose to appropriate certain work instruments, while simultaneously disavowing both the
+vision that had given rise to these instruments and the person within whom the vision was
+first born.}(*) outside of the range of notions deemed
+serious. To this day, few topologists are even aware of the existence of this
+potentially considerable enlargement of their science, and of the novel resources which it
+offers. 
+
+Within this renewed framework, topological, smooth, and other type of spaces
+fit together with schemes (about which they may have heard) 
+as well as topological, differential, \textbf{and} scheme-theoretic
+(seldom-mentioned) multiplicities
+as various incarnation of 
+a single class of geometric objects, name \textbf{ringed topoi} 
+(46$_5$) which play the role of ``spaces'', and within 
+which intuition coming from topology, algebraic geometry, and arithmetic come
+into a single geometric vision.
+The ``modular'' multiplicities,
+which one encounters all over the place
+(provided one's eyes are open), provide several striking examples of this structure (46$_6$).
+The comprehensive study of ringed topoi constitutes a primary guiding thread for the
+purpose of gaining a deeper understanding of the essential properties of geometric
+objects (or other objects, if one can find objects which aren't geometric in
+nature\ldots).
+In this context, modular multiplicities describe the modalities of variation,
+degeneration, and generization.
+This wealth of ideas remains ignored to this day, 
+due to the fact that the notion which allows us to precisely describe it does not fit into 
+the range of currently admitted concepts.
+
+Another unexpected aspect of this recused synthesis\footnote{(**)}(**)
+is the fact that familiar\marginpar{p. 182} homotopical invariants 
+of some of the most common spaces
+(46$_7$)
+(or rather invariants of their profinite compactifications) 
+come equipped with unsuspected arithmetic structures, such as actions of certain profinite
+Galois groups\ldots
+
+Nonetheless, for the past fifteen years, it has been customary within ``high society'' to 
+look down on those who fancy the word ``topos'', unless in the context of a
+joke or if the person happens to be a logician.
+(For these people are known to be different, and one must forgive some of their
+eccentricities\ldots)
+Neither has the yoga of derived categories, serving to express to homology and cohomology
+of topological spaces, entered the lingo of topologists for whom K\"unneth's formula
+(with coefficients in a ring which is not a field)
+continues to be interpreted as a system of two spectral sequences (or at best a pile of
+short exact sequences), 
+rather than a unique canonical isomorphism within an appropriate category;
+just as they continue to ignore the base change theorems (for smooth or proper morphisms
+for instance) which (in the neighboring context of \'etale cohomology) constituted the
+crucial pivot for the ``kickoff'' of said cohomology (cf note 46$_8$ p. 470).
+This comes as no surprise when I realize that the very people who contributed to developing
+this yoga have long forgotten about it; and that they will not hesitate to 
+strike down anyone who has the misfortune to want to use it!\footnote{(*)}(*).
+
+The fifth notion which is close to my heart, perhaps more than any other, is that of
+\textbf{``motives"}.
+It is distinct from the preceding four ideas in that
+\textbf{``the''} correct notion of motive (be it only over a base field, without even
+mentioning the case of an arbitrary base scheme) has not been given a 
+satisfactory definition to this day, even if we are to accept all ``reasonable'' conjectures
+which one may need to this end. Or rather, visibly, 
+\marginpar{p. 183}
+\textbf{the} ``reasonable conjecture'' to be made in the first place, would be that of the
+\textbf{existence} of such a theory, pertaining to certain data and satisfying certain
+properties.
+It would not be hard (and entirely fascinating!) for somebody in the
+know\footnote{(*)}(*),
+to explicitly write such a conjecture down.
+I was about to do so, shortly before I ``left math''.
+
+In some ways, the situation resembles that of the quest for the ``infinitesimally small''
+during the heroic era of differential and integral calculus, with two caveats.
+First, we currently possess an experience in the elaboration of sophisticated mathematical
+theories, together with an efficient conceptual background, which our predecessors lacked. 
+Second, despite the tools which we have at our disposal,
+and the twenty years which have elapsed since this visibly essential notion appeared,
+nobody has cared (or dared in spite of those who didn't care\ldots) to get their hands dirty,
+and to extract the rough features of a theory of motives, the way our ancestors had done
+for infinitesimally calculus, without beating around the bush.
+It is just as clear today for motives as it once was for the infinitesimally small, that
+such beasts exist, and that they manifest themselves in every corner of algebraic
+geometry, as long as one is interested in the cohomology of algebraic varieties and 
+families of such varieties, and more specifically in the ``arithmetic'' properties of
+such objects. 
+Even more so perhaps than in the case of the four other notions which I have mentioned, the
+idea of motives which is the most specific and richest of all, naturally associates to a
+range of intuitions of various kinds, not at all vague and in fact often 
+\marginpar{p. 184}
+expressible with a perfect precision (provided one is willing, if needed, to admit certain motivic
+premises). For me, the most fascinating of these ``motivic intuitions'' was that of
+a ``motivic Galois group'', which in a way allows us to ``put a motivic structure'' 
+on the profinite Galois groups of fields and schemes of finite type (in the absolute
+sense).
+(The technical work required to precisely formulate this notion, 
+having admitted the ``premises'' giving a temporary foundation for the notion of motive,
+was accomplished in the thesis of Neantro Saavedra on ``Tannakian categories''.)
+
+The current consensus surrounding the notion of motive is slightly more nuanced than 
+that of its three brothers (or sisters)
+of misfortune (derived categories, duality formalism of the so-called
+``six-operations'', topoi), 
+in the sense that there hasn't been a case of ``swindling''
+\footnote{(*)}(*). 
+Practically speaking, the end-result is nonetheless the same: as long as there hasn't been
+a proper ``definition'' of motives and associated ``proofs'', serious people can only
+abstain from speaking about them
+(naturally with the utmost regret, but such is protocol among serious people\ldots).
+Of course we may never arrive to a theory of motives and ``prove'' anything regarding them,
+for as long as it is declared that it isn't serious to even speak about them! 
+
+
+
+% \marginpar{p. 181}
+
+\subnote{46$_1$}\label{note:46.1}
+\subnote{46$_2$}\label{note:46.2}
+\subnote{46$_3$}\label{note:46.3}
+\subnote{46$_4$}\label{note:46.4}
+\subnote{46$_5$}\label{note:46.5}
+\subnote{46$_6$}\label{note:46.6}
+\subnote{46$_7$}\label{note:46.7}
+\subnote{46$_8$}\label{note:46.8}
+\subnote{46$_9$}\label{note:46.9}
+
+\subsection{}
+
+\nnote{47}\label{note:47}
+\subnote{47$_1$}\label{note:47.1}
+\subnote{47$_2$}\label{note:47.2}
+\subnote{47$_3$}\label{note:47.3}
+
+\section{}
+
+\subsection{}
+
+\nnote{48}\label{note:48}
+\subnote{48$_1$}\label{note:48.1}
+\subnote{48$_2$}\label{note:48.2}
+
+\subsection{}
+
+\nnote{48'}\label{note:48'}
+
+\subsection{}
+
+\nnote{49}\label{note:49}
+
+\subsection{}
+
+\nnote{50}\label{note:50}
 
 \end{document}
