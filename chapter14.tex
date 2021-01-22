@@ -1,0 +1,198 @@
+% \begin{comment}
+\documentclass{book}
+\usepackage{master}
+\usepackage{changepage}
+\newcommand{\rec}{$\text{R\'ecoltes et Semailles}$}
+\newcommand{\no}{n$^\circ$}
+\hfuzz = 100pt
+
+% NOTE and SUBNOTE FORMATTING
+\usepackage{titlesec}
+\usepackage[dotinlabels]{titletoc}
+
+% define `note'
+\titleclass{\nnote}{straight}[\section]
+\newcounter{nnote}
+\renewcommand{\thennote}{\thesection.\arabic{nnote}}
+\titlespacing*{\nnote}{0pt}{3.5ex plus 1ex minus .2ex}{1ex plus .2ex}
+\titleformat{\nnote}[runin]{\bfseries }{\bfseries Note }{0pt}{}[]
+
+% define `subnote'
+\titleclass{\subnote}{straight}[\section]
+\newcounter{subnote}
+\renewcommand{\thesubnote}{\thesection.\arabic{subnote}}
+\titlespacing*{\subnote}{0pt}{3.5ex plus 1ex minus .2ex}{1ex plus .2ex}
+\titleformat{\subnote}[runin]{\bfseries }{\bfseries Note }{0pt}{}[]
+
+% the first optional arg sets the size of the indentation in the TOC
+\titlecontents{nnote}[9em]
+{}{Note }{}{\titlerule*[1pc]{.}\contentspage}
+
+% the first optional arg sets the size of the indentation in the TOC
+\titlecontents{subnote}[11em]
+{}{Note }{}{\titlerule*[1pc]{.}\contentspage}
+
+\begin{document}
+% print table of contents with notes and subnotes
+\setcounter{tocdepth}{5}
+\setcounter{secnumdepth}{5}
+\startcontents[chapters]
+\printcontents[chapters]{}{0}{}
+
+% \end{comment}
+
+\setcounter{chapter}{13}
+\chapter{B) Pierre and Motives}
+
+\section{IV Motives (burial of a newborn)}
+
+\subsection{Memory from a dream - or the birth of motives}
+
+\nnote{51}\label{note:51} [This note is referenced in note 46 p. 186]
+
+\marginpar{p. 205}(April 19) Since writing the above lines (ending with the note ``My orphans", n$^o 46$) less than a month ago, I have come to realize that they delay the chain of events to a certain extent! I have just received ``Hodge Cycles, Motives and Shimura Varieties" (LN 900) by Pierre Deligne, James S. Milne, Arthur Ogus, and Kuang-Yen Shih, which Deligne kindly transmitted to me along with a list of his publications. This collection of six texts, published in 1982, constitutes an interesting new piece of information since 1970, in that motives are mentioned in the title and present in the text, however modestly, especially through the notion of ``motivic Galois group". Of course, we are still far from a panoramic picture of a theory of motives, which for the past fifteen to twenty years has been awaiting the impetus of a bold mathematician who will be willing to ``paint it, in a vast enough way to serve as a source of inspiration, as a golden thread and a horizon, for one or several generations of arithmetic geometers who will have the privilege of establishing its validity (or in any case of discovering the final word on the reality of motives...) (53).
+
+1982 also seems to mark the year since which\footnote{(*) (May 25) I am delaying the events once again, by one year this time - the turning point took place in June 1981 with the Luminy Colloquium, see the note ``The Inequity - or a feeling of return", n$^o 75$.}(*) the changes in fashion are beginning to slowly turn in favor of derived categories; Zoghman Mebkhout (in a perhaps euphoric rush) already sees them as being on the brink of ``invading all domains of mathematics". If their utility, which was made evident by mere mathematical instinct (for well-informed individuals) since the beginning of the 1960s, is now starting to be recognized, it is (or so it seems to me) thanks to Mebkhout's solitary efforts and his willingness to take on the thankless role of guinea-pig for seven years, with the courage of those who continue to trust their instinct in the face of tyrannical customs...
+
+\marginpar{p. 206}Remarkably, in reading this first publication which marks (twelve years after my departure from the mathematical world) a modest re-entry of the notion of motive into the apparatus of admissible mathematical notions, I could find nothing which would indicate to the uninformed reader that my humble person was involved in any way in the origins of this notion, long considered a taboo. Nor is there any allusion to an authorship of some form ($51_1$) behind the development of a rich and precise ``yoga", which appears in the article (in piecemeal form) as if it came out of the void.
+
+When, just three weeks ago, I laid down my thoughts on the yoga of motives in a page or two, qualifying it as one of the ``orphans" whom I held closer to my heart than any other, I must have been sorely mistaken! Surely was I dreaming, when I seemed to remember years of gestation of a vision, tenuous and elusive at first, and growing richer and more precise over the course of the months and the years, as a result of a persistent effort to grasp the common ``motive", the common quintessence of which the several cohomology theories known at the time (54) were but various incarnations, each telling us in its own language about the nature of the ``motive" of which it was one of the directly tangible manifestations. Surely I was still dreaming when I remembered the strong impression that Serre's intuition had made upon me, regarding his conception of a profinite Galois group, an object which appeared to be of a discrete nature (or at least could be tautologically reduced to simple systems of \textbf{finite} groups) yet gave rise to an immense projective system of $l$-adic \textbf{analytic} or even \textbf{algebraic} groups over $\mathbb{Q}_l$ (by passing to appropriate (algebraic envelopes?)), groups which even had a tendency to be reductive - hence lending themselves to the panoply of intuitions and methods (Lie style) of analytic and algebraic groups. This construction made sense for any prime number $l$, and I felt (or dreamt that I felt...) that there lay a mystery to be probed, regarding the relationship between these algebraic groups associated to different prime numbers; I felt that they must all come from a single projective system of algebraic groups over the only natural common sub-field to all of these base fields, namely the field $\mathbb{Q}$, the ``absolute" field of characteristic zero. And since I like dreaming, I continue dreamed that I remember having gained access to this glimpsed mystery, through work which surely was but a dream since I did not ``prove" anything; and I eventually understood how the notion of motives provided the key to understanding this mystery - that, through the mere presence of a category (here, the category of ``smooth" motives over a given base scheme\marginpar{p. 207}, for instance motives over a given ground field), possessing internal structures similar to those which can be found on the category of linear representations of an algebraic pro-group over a field $k$ (the charm of the notion of algebraic pro-group having been revealed to me by Serre as well at an earlier time), one would be able to reconstruct such a pro-group (given the data of an appropriate ``fiber functor"), and to interpret the ``abstract" category as the category of its linear representations.
+
+This approach towards a ``motivic Galois theory" was suggested to me by the approach which I had found, years earlier, to describe the fundamental group of a topological space or scheme (or even of an arbitrary topos - but here I risk offending delicate ears to whom ``topoi are no fun"...) in terms of the category of \'etale coverings of the ``space" under consideration, and fiber functors on this category. The very language of \textbf{``motivic Galois groups"} (which I could also have called motivic ``fundamental groups", the two intuitions amounting to the same thing in my view since the end of the 1950s...) and of ``fiber functors" (corresponding precisely to the ``manifest incarnations" mentioned earlier, namely the different ``cohomology theories" which may be applied to a given category of motives) is tailor-made to express the profound nature of these groups, and to suggest their intimate ties with ordinary Galois groups and fundamental groups.
+
+I still remember the pleasure and awe which I felt, in playing this game with fiber functors and (torsors under Galois groups?) which send them to one another by ``twisting", upon retrieving in a particularly concrete and fascinating situation the entire panoply of tools from non-commutative cohomology developed in Giraud's book, with the gerbe of fiber functors (here taken over the \'etale topos or, better, the fpqc topos of $\mathbb{Q}$ - interesting and non-trivial topoi if there ever were any!), as well as the (``link"?) (in algebraic groups or pro-groups") connecting this gerbe to the avatars of this link, all being realized by various algebraic groups or pro-groups, corresponding to the different ``sections" of the gerbe, corresponding to the different cohomological functors.
+% todo: verify accuracy of translation
+The various complex points (for instance) of a scheme over characteristic zero each give rise (via the corresponding Hodge functors) to sections of the gerbe, and to torsors providing a transition from one to the next; and both these torsors and the pro-groups acting on them possess remarkable algebro-geometric properties, expressing specific structures of Hodge cohomology - but now\marginpar{p. 208} I am getting ahead of myself and speaking about another chapter of my dream about motives... This was a time when those who issued the decrees of fashion had not yet declared that topoi, gerbes, and the like did not entertain them an that as such it was stupid to speak of them (not that this would have prevented me from recognizing topoi and gerbes when I saw them...). Now that twelve years have elapsed, these very people are pretending to be discovering and are teaching to others the fact that gerbes (if not topoi for now) are indeed relevant to the study of the cohomology of algebraic varieties, and even to that of periods of abelian integrals...
+
+I could also evoke the dream of another memory (or the memory of another dream...) surrounding the dream about motives, which was also born from a ``strong impression" (I am decidedly in full subjective mode!) which some comments by Serre regarding a certain ``philosophy" behind the Weil conjectures had made upon me. Their translation into cohomological terms, for $l$-adic coefficients with varying $l$, led one to suspect the existence of remarkable structures on the corresponding cohomology theories - the structure of a ``weight filtration"\footnote{(*) (January 24 1985) For a rectification of this distorted memory, see note n$^o 164$ (I4), as well as sub-note n$^o 164_1$, which give more details on the filiation of the ``yoga of weights".}(*). Surely, the common ``motive" to the various $l$-adic cohomology theories had to be the ultimate support for this essential arithmetic structure, which as such took on a geometric aspect, that of the remarkable structure of the geometric object that is a ``motive". It would once again be inaccurate of me to speak of a ``work" when the task was to ``guess" (with the internal coherence of a vision in progress as only guide, using the sparse known or conjectured elements lying here and there...) the specific structure of the various cohomological ``avatars" of a motive, and how the weight filtration was expressed therein
+\footnote{(**) (February 28 1985) There was a slight confusion in my mind. I was actually referring to the closely linked filtration by ``levels".}(**), beginning with the Hodge avatar (at a time where Hodge-Deligne theory had not yet been developed, and for good reason...\footnote{(***) This was at a time when the young Deligne had probably not yet heard the word ``scheme" be said in a mathematical context, nor the word ``cohomology". (He learned these notions from me starting in 1965.)}(***)). This allowed me (in a dream) to view within a single vast painting the Tate conjecture on algebraic cycles (a third ``strong impression" which inspired the Dreamer in his dream about motives!) and the Hodge conjecture (55), and to formulate two or three additional conjectures of the same type, about which I spoke to certain people who must have forgotten as I have never heard anyone mention them since, subjected to the same silence as the \marginpar{p. 209}``standard conjectures". In any event, these were only conjectures (unpublished on top of that...). One of them did not concern a specific cohomology theory; rather, it gave a direct interpretation of the weight filtration on the motivic cohomology of a non-singular projective variety over a field in terms of the geometric filtration of this variety by closed subsets of given codimension (with codimension playing the role of ``weight")\footnote{(*) (February 28 1985) The filtration in question here is actually the ``level" filtration (see preceding footnote).}(*).
+
+There was also the work (I should be putting quotation marks around ``work", but I can't find the resolve to do so!) I did towards ``guessing" the behavior of weights with respect to the six operations (completely lost since then...). Here again, I never felt that I was inventing anything, but discovering - or rather listening to what things were telling me whenever I sat down to listen to them with a pen in hand. What they were saying was of a peremptory, and as such unmistakable, precision. 
+
+Then there was a third ``motive-dream", which was in a sense the wedding of the preceding two dreams - regarding the problem of interpreting, in terms of structures imposed on the motivic Galois groups and on the torsors under these groups which can be used to ``twist" a fiber functor to (canonically) obtain any other fiber functor \footnote{(**) Just as the fundamental groups $\pi_1(x), \pi_1(y)$ of some ``space" $X$ at two ``points" $x$ and $y$ can deduced from each other using the torsor $\pi_1(x, y)$ of homotopy classes of paths from $x$ to $y$...}(**), the various additional structures exhibited by the category of motives, with the weight filtration being one of the very first such structures. I seem to remember that this process was less guesswork than at any other point, but rather consisted of accurate mathematical translations. The work involved several new ``exercises" on linear representations of algebraic group, which I spent days and weeks solving with great pleasure and the feeling that I was at last getting closer to a mystery that had been fascinating me for years! Perhaps the most subtle notion that I had to apprehend and formulate in terms of representations was that of ``polarization" of a motive, wherein I drew inspiration from Hodge theory, trying to extract the ideas that still made sense in a motivic context. This reflection must have taken place at the same time as my reflection around formulating the ``standard conjectures", with both events inspired\marginpar{p. 210} by Serre's idea (as always!) of establishing a ``K\"ahler analogue" to the Weil conjectures. In such a situation, in which the things themselves whisper about their secret nature and the ways in which we will be best able to delicately and faithfully express it, even though several essential facts seem to lie outside of the immediate scope of a proof, instinct dictates that we simply write down on paper what the things are insistently whispering, a message which furthermore grows clearer when we take the time to write it down! There is no need to worry about obtaining complete proofs or constructions - to burden oneself with such expectations at this stage of the process is to bar oneself from accessing the most delicate and essential step of a large scale work of discovery: that of the birth of a vision, gaining shape and substance as it emerges from an apparent void. The simple act of \textbf{writing}. \textbf{naming}, and of \textbf{describing} - if only to describe elusive intuitions or mere ``hunches" reticent about taking concrete form - possesses a \textbf{creative power}. There lies the most important instrument in enacting the passion for knowledge, when the latter is invested into things which can be apprehended by the intellect. In the process of discovery for such matters, this work is the most creative step of all; it always precedes proof and enables it - or rather, without it, the question of ``proving" something would not even arise, as nothing pertaining to the heart of the matter would have yet been formulated and seen. Through simple virtue of the effort of formulating, that which was amorphous takes form and lends itself to examination, in process of separating the visibly wrong from the possible, and above all from that which is so perfectly in accordance with the collection of things known, or guessed, that it itself becomes a tangible and reliable component of the vision being born. The latter grows richer and more precise over the course of the formulation process.  
+
+Ten things which are suspected of being true, none of which with certainty (say for instance the Hodge conjecture), through the process of mutually shedding light on one another, completing each other and concurring with a common mysterious harmony, acquire through this harmony the strength of a vision. Even in the event all ten of these things would turn out to be false, the work which resulted in this provisory vision was not done in vain, in that the harmony which it allowed us to glimpse and to ever-so-slightly penetrate is not an illusion, but rather a reality which it is urging us to unravel. Through this work, and only this way, we were able to establish intimate contact with this reality, this hidden and perfect harmony. Once we realize that things are the way they are for a reason\marginpar{p. 211}, and that our vocation is to know them, rather than to dominate them, we are able to see the day when a mistake is highlighted as a day for celebration (56) - just as much as the day when a proof shows us beyond all doubt that such a thing which we were imagining is indeed the true and faithful expression of reality itself.
+
+In either case, such a discovery comes as a reward to labor, and could not have been reached without it. But even though the reward may only come after years at the task, or even in the event that we never reach the final word, an achievement relayed to our successors, the work itself is its own reward, rich in every instant of that which it reveals to us in that instant.
+
+\subnote{51$_1$}\label{note:51.1} (June 5) Zoghman Mebkhout just pointed out to me a reference to ``Grothendieck motives" on page 261 of the volume in question, in a paper of Deligne which ``resumes and completes a letter to Langlands". It reads: ``we will not be working with Grothendieck motives, as he defined them in terms of algebraic cycles, but with \textbf{absolute Hodge motives}, defined analogously in terms of absolute Hodge cycles". ``Grothendieck motives" (not underlined) are thus not mentioned as a source of inspiration, but in order to create a demarcation, insisting that the paper is treating of \textbf{something else} (the latter having been carefully underlined). This distancing is all the more remarkable given that the validity of the Hodge conjecture (a conjecture known to Deligne, I suppose, as well as to any reader of his paper-letter, beginning with its primary addressee Langlands) would imply that these two notions are \textbf{identical}!!
+
+Of course, beginning in 1964 when I formulated the notion of motivic Galois group, I knew full well that a notion of ``Hodge motive" could be developed along the same lines, leading to a corresponding notion of ``motivic Galois-Hodge group", which was introduced independently by Tate (whether at an earlier or later time, I cannot recall) and thereafter has been known as the Hodge-Tate group (associated to a Hodge structure). The crude scam (which doesn't seem to inconvenience anybody, since it comes from such a prestigious character) consists in outright obfuscating the filiation of a novel and profound notion - that of motive - as well as the rich web of intuitions which I have developed surrounding this notion, under the derisory pretext that the technical approach taken to study this notion (via absolute Hodge cycles instead of algebraic cycles) is (maybe, if the Hodge conjecture is false) different from the one which I had (provisionally) adopted. This yoga, which I had developed\marginpar{p. 212} over the course of nearly a ten-year period, was the principal source of inspiration in Deligne's work from his very beginnings in 1968. Its fecundity and power as a tool for discovery were clear well ahead of my departure in 1970, and its identity is independent of the particular technical approach chosen to establish the validity of such or such limited part of this yoga. Deligne deserves credit for finding two such approaches, independently of any conjecture. On the other hand, he did not have the honesty to name his source of inspiration, persisting since 1968 in hiding it from everyone so as to maintain exclusive benefits, awaiting the opportunity to (tacitly) claim the credit for himself in 1982.
+
+
+\subsection{The burial - or the New Father}
+
+\nnote{52}\label{note:52} Coming back to my dream about motives, I should also mention that I remember dreaming out loud. Granted, a dreamer's work is solitary in nature - yet, the ebbs and flow of this unrelenting journey that took course over the years, in parallel with a vast project of foundations which occupied the majority of my time, had a witness on a daily basis, someone paying more close attention than Serre, who contented himself with observing things from a distance...\footnote{() (May 25) The beginnings of my reflection surrounding motives nonetheless took place before Deligne's appearance. My handwritten notes on motivic Galois theory are dated to the year 1964.}() I wrote about this day-to-day confidant in my reminiscence, saying that he ``had taken on a bit of a student role" around the middle of the 1960s, and that I had taught him ``the little I knew about algebraic geometry". I have also added that I had even told him about what I did not ``know" in the common sense of the word - these mathematical ``dreams" (on the theme of motives as on other topics) which he always welcomed with attentive ears and an alert mind, as eager to understand as I was myself.
+
+It is true that, at the time of writing, when I said that Pierre Deligne had ``taken on a bit of a student role", I was only referring to a wholly subjective impression (57), uncorroborated (as far as I am aware) by any written - or at least by any published - source which would suggest that Deligne may have learned something from me - even though I gladly remember presently that I never once discussed mathematics with him without learning something from the conversation. (And even after I stopped discussing mathematics with him, I continued learning from him about other things which are perhaps more difficult and more important, including on this very day in the writing of these words...)
+
+\marginpar{p. 213}I was told about the existence of a text by Deligne and others regarding the question of motives, or at the very least of ``tannakian categories", by a third party who surmised (I wonder how!) that I could be interested. Upon reaching out to Deligne thereafter, I was met by his sincere surprise that something of the sort could be of interest to me. Reading through the copy which he kindly sent me nonetheless, I realized that his surprise was indeed completely well-founded. Visibly, I had never had anything to do with the subject in question. There is at most an allusion made in passing, in the introduction, regarding the fact that certain ``standard conjectures" (which I had once formulated, heaven knows why) would have consequences for the structure of the category of motives over a field... The reader wishing to know more would be hard-pressed to do so, as no further precision or reference regarding these conjectures is made in the entire book; nor is any mention made to the one and only published paper in which I explain the way in which the category of motives over a field may be constructed in terms of the standard conjectures; nor is the only other text on the topic of motives published pre-1970 cited, an article by Demazure (produced in the context of a S\'eminaire Bourbaki, if I remember correctly) which followed my construction principle ad hoc from a slightly different perspective...\footnote{() Upon verification, I now realize that other than a few pages on the standard conjectures (Algebraic Geometry, Bombay, 1968, Oxford Univ. Press (1969), pp. 193-199), I have never published a mathematical text on the topic of motives. In Demazure's talk (S\'eminaire Bourbaki n$^o 365$, 1969/70) following Manin's talk in Russian, there are references made to a series of talks which I had given at the IHES in 1967 and which were meant (I suppose) to serve as a first broad sketch of a vision on motives. Kleiman also gave a talk on the standard conjectures and their connection to the Weil conjectures, in more details than was given at the Bombay congress announcement (Algebraic Cycles and the Weil conjectures, in Dix expos\'es sur la cohomologie des sch\'emas, Masson-North Holland, 1968, p. 359-386). I am not aware of any reflection on the standard conjectures, notably involving steps taken towards a proof thereof, other than my own pre-1970. Based on the echoes which I have received, it seems to me that the deliberate decision to ignore these key-conjectures (which I considered, as I mentioned in my Bombay sketch, as one of the most important open problems in algebraic geometry, together with the resolution of singularities of (excellent?) schemes) has a lot to do with the impression of stagnation which is currently emanating from the cohomology theory of algebraic varieties.}()
+
+\marginpar{p. 214}Nonetheless, Neantro Saavedra, who was lucky to be one of my ``pre-1970 students", was duly cited. He had written a thesis under my supervision about what I remember calling ``rigid tensor categories", and which he named ``tannakian categories". One may again wonder through what miraculous coincidence Saavedra's thesis had foreseen in advance just the needs of Deligne's theory of motives, which was only to emerge ten years later! In fact, the work that Saavedra does in his thesis is precisely \textbf{the} key step needed for the development of a motivic Galois theory, just as J. L. Verdier's thesis was in principle \textbf{the} key step needed for the development of the formalism of the six operations in cohomology. One difference (among others) to Saavedra's credit is that he actually published his work; granted, he did not have the combined penmanship of Hartshorne, Deligne, and Illusie to exempt him from such a formality. Yet, ten years after the fact, Saavedra's thesis is now reproduced ab ovo and nearly in toto in a remarkable book, written this time around by Deligne and Milne. 
+
+Writing this book was perhaps not strictly necessary, if all that needed to be done was to rectify two particular points in Saavedra's work (58). But everything happens for a raison, and I think I understand why Deligne himself took the trouble to do this\footnote{() See on this topic my reflections in the note ``Clean Slate", n$^o 67$.}(), going against his own extremely stringent criteria when it comes to publications, which he is known to apply with exemplary rigor when it comes to authors other than himself...\footnote{(*) (June 8) All the more so when it comes to publications which bear the sign of my influence - see on this topic the episode ``The note - or the new ethics", section 33.}(*).
+
+Regarding the paternity of the notions involved and of the yoga of motives, the answer goes without saying in the eyes of the uninformed reader (at a time when informed readers are getting rarer by the day and will one day have run their course...) - and this without having to disturb ancestral figures such as Riemann and Hilbert or even the good Lord. If the prestigious author does not say a word about filiation, letting the pretty result on absolute Hodge cycles and abelian varieties appear as a starting point, or even as the birth, of the theory of motives, it is as an honorable act of modesty\marginpar{p. 215}, fully in line with the customs and ethics of the profession, which advise that we let others (if needs be) give credit where credit is visibly due: to the legitimate Father...
+
+
+\nnote{53}\label{note:53} Affected by the vicissitudes of the orphan at hand, and doubting that someone else will do the work whose need and scope I am apparently the only one to perceive to this day, I presume that the ``bold mathematician" in question will be none other than myself, once I have reached the end of Pursuing Stacks (a project which I expect to last for about another year).
+
+\nnote{54}\label{note:54} Since then, two new cohomology theories for algebraic varieties have appeared (other than Hodge-Deligne theory, which is a natural outgrowth in the ``motivic" spirit of Hodge theory) - namely, Deligne's theory of ``stratified promodules", and most notably the theory of crystals, ``$\mathcal{D}$-modules-style" \'a la Sato-Mebkhout, together with the new light shed on the later by the God-given theorem (alias Mebkhout's theorem) which was discussed earlier. This approach towards constructible discrete coefficients is probably destined to replace Deligne's older approach, due to the fact that it better lends itself to the expression of the connections with de Rham cohomology. These new theories do not produce new fiber functors on the category of smooth motives over a given scheme, but rather (modulo a more extensive work on foundations than has been done as of yet) they provide a way of grasping more precisely the ``Hodge" incarnation of a (not necessarily smooth) motive on a scheme of finite type over the complex numbers, or the ``de Rham" incarnation on a scheme of finite type over a field of characteristic zero. It is possible that the theory (apparently still unwritten) of Hodge-Deligne coefficients on a scheme of finite type over $\mathbb{C}$ will eventually appear as embedded into the (equally unwritten) theory of crystalline coefficients \'a la Sato-Mebkhout (with the key added data of a filtration), or, put more precisely, as the intersection of Hodge-Deligne theory with the theory of constructible discrete coefficients in $\mathbb{Q}$-vector spaces... There also remains the elucidation of the relationships between crystalline theory \'a la Mebkhout and the theory developed in positive characteristic by Berthelot and others, a task perceived by Mebkhout before 1978, in the midst of a completely disinterested environment, and which appears to me to be one of the most fascinating questions currently posed in the endeavor of understanding ``the" (unique and indivisible, i.e. motivic!) cohomology of algebraic varieties.
+
+\nnote{55}\label{note:55}\marginpar{p. 216}Even though I was only dreaming, my dream about the relationship between motives and Hodge structures led me to inadvertently notice an incoherence in the ``generalized" Hodge conjecture, such as it was initially formulated by Hodge, and to replace it by a rectified version which itself should be (or so I would wager) no more nor less false than the ``usual" Hodge conjecture about algebraic cycles.
+
+\subsection{Prelude to a massacre}
+
+\nnote{56}\label{note:56} 
+I am notably thinking about Griffith's discovery, in the context of the cohomology of
+algebraic varieties, regarding the falsity 
+of a tantalizing idea that 
+was circulating for a long time concerning algebraic cycles, namely that a 
+cycle homologous to zero admitted a multiple 
+which is algebraically equivalent to zero. 
+This discover of a brand new phenomenon was so striking that I spent a whole week 
+trying to wrap my head around Griffith's example, by transposing his construction (which
+was transcendental over the field $\CC$) into a ``maximally general'' construction, making
+sense over base fields of arbitrary characteristic. This extension was not entirely
+obvious, involving (if I remember correctly) Leray spectral sequences and the Lefschetz
+theorem. 
+
+(June 16 ) This reflection lead me to develop
+the cohomology theory of ``Lefschetz pencils'' in the \'etale context.
+My notes on this topic were developed during the 
+SGA 7 II seminar (by P. Deligne and N. Katz) as well as in the expose\'es 
+XVII, XVIII, XX by N. Katz (who took the care to reference these notes,
+which he closely followed).
+On the other hand, in the volume's introduction by P. Deligne, where it is said that the
+key results of the volume are expos\'e XV (the Picard-Lefschetz formula for \'etale
+cohomology) and XVIII (the theory of Lefschetz pencils), 
+the author abstains from indicating that I had anything to do with 
+this ``key theory'' of Lefschetz pencils. 
+In reading the introduction, one gets the impression that I played no part in the
+development of the volume's themes.
+
+The long seminar SGA 7, which took place in the years 1967-69,
+continued the seminars SGA 1 through SGA 6 which were
+developed under my impetus between 1960 and 1967, 
+was organized by Deligne and myself, after I kicked off a development of a systematic
+theory of groups of vanishing cycles.\todo{\'evanescents}
+Since the write-up of the talks by various volunteers dragged for some time, 
+the two volumes of the seminar (SGA 7 I and SGA 7 II) were only published in 1973, by
+\marginpar{p. 217}Deligne. Even though it was agreed during the seminar that we would be
+presenting it as a common endeavor, Deligne made the (strange) request after my departure
+that we \textbf{cut the seminar in half}, with a part I presented as 
+being directed by me, and the other half by himself and Katz. 
+I now view this event as part of an ``operation'' foreshadowing the 
+operation ``SGA $4\frac{1}{2}$", which aims 
+(among other things) to present the entirety of the foundational series SGA 1
+through SGA 7 - which in his mind and point of view were inseparable from my person, 
+as well as the series EGA, i.e. El\'ements de G\'eom\'etrie Alg\'ebrique, 
+as a compendium of texts with a variety of authors, where I myself only play an
+episodic, if not superfluous, role.
+This tendency appears very clearly, if not brutally, in the volume SGA $4\frac{1}{2}$
+and most notably in the seminar SGA 5, which is inextricably linked to that volume.
+See the note ``the clean slate'', and ``the massacre'', \no s 67 and 87, and most of all
+``the remains\ldots'' (\no 88), among others.
+
+(June 17) I was responsible for the overall structure of the seminar
+SGA 7 (for which I did not see a need for a separation into parts ``I'' and ``II'', and still
+do not to this day) while Deligne made important contributions 
+(mentioned in my report on Deligne's work written in
+1969, see \no 13, 14 of this report), 
+the most crucial for the needs of the seminar being the Picard-Lefschetz formula, proven
+via a specialization argument starting from the already known case in the transcendental
+setting.
+The cutting of the seminar in two parts was unjustified mathematically, as well as
+regarding our respective contributions - both Deligne and I brought substantial
+contributions to each of the two ``pieces'' of SGA 7.
+
+I would of course have been delighted if Deligne had continued the foundational series
+SGA, which I had started and was far from reaching its end!
+However, this ``operations SGA 7'' is not at all a continuation but rather a sort of
+brutal ``saw cut'' (or chainsaw cut\ldots) \textbf{putting an end} to the SGA series, 
+with a volume which ostentatiously is distinct from my person, even though it is linked to
+my work and bears its mark as much as any other. 
+Even though my person is obscured as much as it can be, the tone taken with respect to my
+work is not yet the barely disguised tone of disdain that characterizes the ``operation
+SGA $4\frac{1}{2}$'' - 
+the latter represents an even more brutal saw cut, affecting the unity of
+the seminars SGA 4 and 5, and serving as a means and pretext to the lawful plunder of the
+unpublished part of SGA 5, whose stolen pieces were equitably shared by
+Deligne and Verdier\ldots
+
+\nnote{57}\label{note:57}
+\marginpar{p. 218}I should quickly mention that the same remark applied to the other
+gifted mathematician about whom I hazard to say (in note \no 19) that he took
+on a bit of a student's role, ten years after Deligne.
+
+\nnote{58}\label{note:58}
+
+\subsection{The new ethics (2) - or the free-for-all fair}
+
+\nnote{59}\label{note:59}
+
+\subsection{Appropriation and contempt}
+
+\nnote{$!59'$}\label{note:!59'}
+
+\end{document}
