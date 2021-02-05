@@ -1,8 +1,36 @@
 \documentclass{book}
 \usepackage{master}
+\usepackage{changepage}
 \newcommand{\rec}{$\text{R\'ecoltes et Semailles}$}
 \newcommand{\no}{n$^\circ$}
 \hfuzz = 100pt
+
+% NOTE and SUBNOTE FORMATTING
+\usepackage{titlesec}
+\usepackage[dotinlabels]{titletoc}
+
+% define `note'
+\titleclass{\nnote}{straight}[\section]
+\newcounter{nnote}
+\renewcommand{\thennote}{\thesection.\arabic{nnote}}
+\titlespacing*{\nnote}{0pt}{3.5ex plus 1ex minus .2ex}{1ex plus .2ex}
+\titleformat{\nnote}[runin]{\bfseries }{\bfseries Note }{0pt}{}[]
+
+% define `subnote'
+\titleclass{\subnote}{straight}[\section]
+\newcounter{subnote}
+\renewcommand{\thesubnote}{\thesection.\arabic{subnote}}
+\titlespacing*{\subnote}{0pt}{3.5ex plus 1ex minus .2ex}{1ex plus .2ex}
+\titleformat{\subnote}[runin]{\bfseries }{\bfseries Note }{0pt}{}[]
+
+% the first optional arg sets the size of the indentation in the TOC
+\titlecontents{nnote}[9em]
+{}{Note }{}{\titlerule*[1pc]{.}\contentspage}
+
+% the first optional arg sets the size of the indentation in the TOC
+\titlecontents{subnote}[11em]
+{}{Note }{}{\titlerule*[1pc]{.}\contentspage}
+
 \begin{document}
 \title{R\'ecoltes et Semailles}
 \author{Alexandre Grothendieck}
@@ -24,14 +52,16 @@
 \chapter{A letter}
 \input{chapter3}
 
-% \part{I}
-%
-% \part{II}
-% \label{part:II}
-%
-% \part{III}
-%
-% \part{IV}
+\part{First part: Fatuity and Renewal}
+
+\part{Second part: The Burial (I) - or the Robe of the Emperor of China}
+\label{part:II}
+
+\part{Third part: The Burial (II) - or the Key to the Yin and the Yang}
+
+\part{Fourth part: The Burial (III) - or the Four Operations}
+\input{chapter13}
+\input{chapter14}
 
 % \label{part:IV}
 
