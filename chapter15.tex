@@ -1,0 +1,255 @@
+\begin{comment}
+\documentclass{book}
+\usepackage{master}
+\usepackage{changepage}
+\newcommand{\rec}{$\text{R\'ecoltes et Semailles}$}
+\newcommand{\no}{n$^\circ$}
+\hfuzz = 100pt
+
+% NOTE and SUBNOTE FORMATTING
+\usepackage{titlesec}
+\usepackage[dotinlabels]{titletoc}
+
+% define `note'
+\titleclass{\nnote}{straight}[\section]
+\newcounter{nnote}
+\renewcommand{\thennote}{\thesection.\arabic{nnote}}
+\titlespacing*{\nnote}{0pt}{3.5ex plus 1ex minus .2ex}{1ex plus .2ex}
+\titleformat{\nnote}[runin]{\bfseries }{\bfseries Note }{0pt}{}[]
+
+% define `subnote'
+\titleclass{\subnote}{straight}[\section]
+\newcounter{subnote}
+\renewcommand{\thesubnote}{\thesection.\arabic{subnote}}
+\titlespacing*{\subnote}{0pt}{3.5ex plus 1ex minus .2ex}{1ex plus .2ex}
+\titleformat{\subnote}[runin]{\bfseries }{\bfseries Note }{0pt}{}[]
+
+% the first optional arg sets the size of the indentation in the TOC
+\titlecontents{nnote}[9em]
+{}{Note }{}{\titlerule*[1pc]{.}\contentspage}
+
+% the first optional arg sets the size of the indentation in the TOC
+\titlecontents{subnote}[11em]
+{}{Note }{}{\titlerule*[1pc]{.}\contentspage}
+
+\newtheorem{remark}{Remark}
+\theoremstyle{nonumberbreak}
+\newtheorem{remarknn}{Remark}
+
+\begin{document}
+% print table of contents with notes and subnotes
+ \setcounter{tocdepth}{5}
+ \setcounter{secnumdepth}{5}
+ \startcontents[chapters]
+ \printcontents[chapters]{}{0}{}
+
+\setcounter{chapter}{15}
+\end{comment}
+
+\chapter{C) High Society}
+
+\section{VII The Colloquium - or Mebkhout's sheaves and Perversity}
+
+\subsection{The Iniquity or a feeling of return}
+
+\nnote{75}
+
+\subsection{The colloquium}
+
+\nnote{75'}
+
+\subsection{The prestidigitator}
+
+\nnote{!75''}
+
+\subsection{Perversity}
+
+\nnote{76}
+
+\subsection{Thumbs up!}
+
+\nnote{77}
+
+\subsection{The robe of the emperor of China}
+
+\nnote{77'}
+
+\subsection{Encounters from beyond the grave}
+
+\nnote{78}
+
+\subnote{78$_1$}
+
+\subsection{The victim - or the two silences}
+
+\nnote{78'}
+
+\subnote{78$_1$'}
+
+\subnote{78$_2$'}
+
+\subsection{The Boss}
+
+\nnote{!78''}
+
+\subsection{My friends}
+
+\nnote{79}
+
+\subsection{The tome and high society - or moon and green cheese...}
+
+\nnote{80}
+
+\section{VIII The Student - a.k.a. the Boss}
+
+\subsection{Thesis on credit and risk-proof insurance}
+
+\nnote{81}
+
+\subnote{81$_1$}
+
+\subnote{81$_2$}
+
+\subnote{81$_3$}
+
+\subsection{The right references}
+
+\nnote{82}
+
+\subsection{The jest, or the ``weight complexes"}
+
+\nnote{83}
+
+\section{IX My students}
+
+\subsection{Silence}
+
+\nnote{84}
+
+\subnote{84$_1$}
+
+\subsection{Solidarity}
+
+\nnote{85}
+
+\subsection{Mystification}
+
+\nnote{!85'}
+
+\subnote{85$_1$}
+
+\subnote{85$_2$}
+
+\subsection{The defunct}
+
+\nnote{86}
+
+\subsection{The massacre}
+
+\nnote{87}
+
+\subnote{87$_1$} (May 31) This closing talk, probably one of the most interesting and substantial, along with  the opening talk, were visibly not lost on everyone, as I now realize upon learning about MacPherson's paper ``Chern classes for singular algebraic varieties" (Chern classes\marginpar{p. 362} for singular algebraic varieties, Annals of Math. (2) 100, 1974, p. 423-432)\todo{cite} (submitted in April 1973). There, I found under the name of ``Deligne-Grothendieck conjecture" one of the main conjectures which I had introduced in said talk in the context of schemes. The conjecture was reformulated by MacPherson in the transcendental context of algebraic varieties over the complex numbers, where the Chow ring is replaced by the homology group. Deligne had learned about this conjecture\footnote{(*)}(*) during my 1966 talk, the same year that he joined the seminar and started familiarizing himself with the language of schemes and cohomological methods (see the note ``One of a kind", n$^o$ 67'). It is nonetheless kind to have included me in the name of this conjecture - a few years later this would have been out of the question...
+
+(June 6) I would like to use this occasion to explicitly write down the conjecture which I had announced in the context of schemes, while also probably hinting at the obvious analogue in the complex analytic (or even rigid analytic) context. I viewed it as a ``Riemann-Roch"-type theorem, albeit with discrete coefficients instead of coherent coefficients. (Zoghman Mebkhout also told me that his viewpoint on $\mathcal{D}$-modules should enable one to consider both Riemann-Roch theorems as contained in a single crystalline Riemann-Roch theorem, which in zero characteristic would constitute the natural synthesis of the two Riemann-Roch theorems that I have introduced in mathematics, the first in 1957 and the second in 1966). Start by fixing a coefficient ring $\Lambda$ (not necessarily commutative, but noetherian for simplicity and furthermore with torsion prime to the characteristic of the schemes under considerations, to meet the needs of \'etale cohomology...). Given a scheme $X$, write 
+$$ \text{K}_{\cdot}(X, \Lambda) $$
+to denote the Grothendieck group associated to constructible \'etale sheaves of $\Lambda$-modules. This group is functorial in $X$ with respect to the functors $\textbf{R}f_!$ when restricting our attention to separated scheme morphisms of finite type. For regular $X$, I claimed that there exists a canonical group homomorphism, playing the role of the ``Chern character"\marginpar{p. 363} in the coherent Riemann-Roch theorem,
+\begin{equation}\label{chern1.1} 
+\text{ch}_X: \text{K}_{\cdot}(X, \Lambda) \to \text{A}(X) \otimes_{\mathbb{Z}} \text{K}_{\cdot}(\Lambda),
+\end{equation}
+where $\text{A}(X)$ is the Chow ring of $X$ and $\text{K}_{\cdot}(\Lambda)$ is the Grothendieck group associated to $\Lambda$-modules of finite type. This homomorphism was supposed to be completely determined by the presence of a ``discrete Riemann-Roch formula" for \textbf{proper} morphisms between regular schemes $f: X \to Y$, whose form is analogous to the Riemann-Roch formula in the coherent context, except that the Todd ``multiplier" is replaced by the total relative Chern class:
+$$ \text{ch}_Y(f_!(x)) = f_*(\text{ch}(x)c(f)), $$
+where $c(f)$ denotes the total Chern class of $f$. It isn't hard to see that, in a context where one has access to a resolution of singularities theorem in the strong sense of Hironaka's, this Riemann-Roch formula does indeed uniquely determine the $\text{ch}_X$'s. 
+
+Of course, we are supposing that we are working in a context in which there is a notion of Chow ring. (I am not aware of any attempt to develop a theory of Chow rings for regular schemes that are not of finite type over a field.) Otherwise, we could also work with the graded ring associated to the usual ``Grothendieck ring" $K^0(X)$ in the coherent context, equipped with the usual filtration (see SGA 6); or we could replace $\text{A}(X)$ by the even $\ell$-adic cohomology ring, given by the direct sum $\bigoplus_i \text{H}^{2i}(X, \underline{\mathbb{Z}}_\ell(i)$. This comes with the added baggage of an artificial parameter $\ell$ and produces coarser, ``purely numerical" formulas, whereas the Chow ring has the added charm of having a continuous structure which is destroyed upon passing to cohomology.
+
+Already in the case where $X$ is a smooth algebraic curve over an algebraically closed field, computing $\text{ch}_X$ involves studying delicate Artin-Serre-Swan-type local invariants. This hints at the depth of the general conjecture, whose pursuit would involve understanding the analogues of these invariants in higher dimensions. 
+
+\textbf{Remark.}  Writing $\text{K}^{\cdot}(X, \Lambda)$ to denote the ``Grothendieck ring" associated to constructible complexes of \'etale sheaves of $\Lambda$-modules of finite Tor-dimension (which acts on $\text{K}_{\cdot}(X, \Lambda)$ when $\Lambda$ is commutative...), we also expect to have a homomorphism
+\begin{equation}\label{chern1.2} 
+\text{ch}_X: \text{K}^{\cdot}(X, \Lambda) \to \text{A}(X) \otimes_{\mathbb{Z}} \text{K}^\cdot(\Lambda), 
+\end{equation}
+giving rise (mutatis mutandis) to the same Riemann-Roch formula.
+
+\marginpar{p. 364}Now, let $\text{Cons}(X)$ denote the ring of constructible integral-valued functions on $X$. We can define more or less tautologically canonical homomorphisms:
+\begin{equation}\label{chern2.1} 
+\text{K}_{\cdot}(X, \Lambda) \to \text{Cons}(X) \otimes_{\mathbb{Z}} \text{K}_\cdot(\Lambda), \text{ and} 
+\end{equation}
+\begin{equation}\label{chern2.2} 
+\text{K}^{\cdot}(X, \Lambda) \to \text{Cons}(X) \otimes_{\mathbb{Z}} \text{K}^\cdot(\Lambda). 
+\end{equation}
+If we restrict our attention to schemes in \textbf{zero characteristic}, then (using Euler-Poincar\'e characteristics with proper support) we see that the group $\text{Cons}(X)$ is a \underline{covariant} functor with respect to morphisms of finite-type between noetherian schemes (in addition to being contravariant as a ring-functor, and this independently of the characteristic), compatibly with the above tautological morphisms. (This corresponds to the ``well-known" fact, which I don't recall being proven in the oral seminar SGA 5, that in \textbf{zero characteristic}, a locally constant sheaf of $\Lambda$-modules $F$ over an algebraic scheme\todo{algebraic space?} $X$ has image $d_\chi(X)$ under the map 
+$$ f_!: \text{K}^{\cdot}(X, \Lambda) \to \text{K}^{\cdot}(e, \Lambda) \simeq K^\cdot(\Lambda), $$
+where $d$ is the rank of $F$, $e = \Spec k$, and $k$ is the algebraically closed base field...)\todo{figure out what $d_\chi(X)$ means} This suggests that the Chern homomorphisms \ref{chern1.1} and \ref{chern1.2} should be deducible from the tautological homomorphisms \ref{chern2.1} and \ref{chern2.2} upon composition with a ``universal" Chern homomorphism (independent of the choice of coefficient ring $\Lambda$)
+$$ \text{ch}_X: \text{Cons}(X) \to \text{A}(X), $$
+in such a way that the two versions of the Riemann-Roch formula ``with $\Lambda$-coefficients" appear as formally enclosed in a RR formula at the level of constructible functions, with the latter always taking the same form.
+
+When working with schemes over a fixed base field (this time in arbitrary characteristic), or more generally over a fixed \textbf{regular} base scheme $S$ (such as for instance $S = \Spec \mathbb{Z}$), the form of the Riemann-Roch formula closest to the traditional notation (in the coherent context, familiar since 1957) can be obtained by introducing the product
+\begin{equation}\label{relchern} 
+\text{ch}_X(x)c(X/S) = c_{X/S}(x)
+\end{equation}
+(where $x$ is in either $\text{K}_\cdot(X, \Lambda)$ or in $\text{K}^\cdot(X, \Lambda)$), which could be called the \marginpar{p. 365}\textbf{Chern class of $x$ relative to the base $S$}. When $x$ is the unit of $\text{K}^\cdot(X, \Lambda)$, i.e. the class of the constant sheaf with value $\Lambda$, we recover the image of the relative total Chern class of $X$ with respect to $S$ under the canonical homomorphism $\text{A}(X) \to \text{A}(X) \otimes \text{K}^\cdot(\Lambda)$. With this notation in place, the RR formula becomes equivalent to the fact that the formation of these relative Chern classes
+\begin{equation}\label{chern3.1}
+ c_{X/S}: \text{K}_\cdot(X, \Lambda) \to \text{A}(X) \otimes \text{K}(\Lambda) 
+ \end{equation}
+for fixed $S$ and varying regular scheme $X$ of finite type over $S$ is functorial with respect to proper morphisms, and likewise for the variant \ref{chern1.2}\todo{make sure the right equation is being referenced}. In zero characteristic, this can be reduced to the functoriality (with respect to proper morphisms) of the corresponding map
+\begin{equation}\label{abschern} 
+c_{X/S}: \text{Const}(X) \to \text{A}(X). 
+\end{equation}
+
+It is under this form that the existence and uniqueness of an absolute ``Chern class" \ref{abschern} in the case $S = \Spec \mathbb{C}$ is conjectured in the work of MacPherson, the relevant conditions being (here as in the general case in zero characteristic) (a) functoriality of \ref{abschern} with respect to proper morphisms and (b) the identity $c_{X/S}(1) = c(X/S)$ (in this case, the ``absolute" total Chern class). The form of the conjecture presented and proven by MacPherson differs from my initial conjecture in two ways. The first is a ``negative", namely that he is not working in the Chow ring, but rather in the integral cohomology ring, or more precisely the integral homology group, defined by transcendental methods. The other is a ``positive" - and this is possibly where Deligne contributed to my initial conjecture (unless this contribution is due to MacPhersson\footnote{(*) (March 1985) That was indeed the case, see note n$^o$164 referenced in the previous footnote.}(*)). Namely, the observation is that in order to prove existence and uniqueness for \ref{abschern}, we don't need to restrict ourselves to regular schemes $X$, as long as we replace $\text{A}(X)$ by the integral homology group. As such, it is probable that the same holds in the general case, if we write $\text{A}(X)$ (or better $\text{A}(X)$) to denote the \textbf{Chow group} (which is no longer a ring in general) of a noetherian scheme $X$. Said differently: while the heuristic definition of the invariants $\text{ch}_X(x)$ (for $x$ in either $\text{K}_\cdot(X, \Lambda)$ or in $\text{K}^\cdot(X, \Lambda)$) uses in an essential way the hypothesis that the ambient scheme is regular, upon multiplying by the ``multiplier" $c(X/S)$ (for $X$ of finite type over a fixed regular scheme $S$), the product obtained in \cite{relchern} seems to still make sense regardless of any regularity hypothesis on\marginpar{p. 366}X, as an element of the tensor product 
+$$ \text{A}_\cdot(X) \otimes K_\cdot(\Lambda) \text{  or } \text{A}_\cdot(X) \otimes K^\cdot(\Lambda),  $$
+where $\text{A}_\cdot(X)$ denotes the Chow group of $X$. The spirit of MacPherson's proof (which does not use resolution of singularities) seems to suggest that it it possible to exhibit a ``constructive" and explicit construction of the homomorphism \ref{chern3.1}, by ``making do" with the singularities of $X$ as they are, as well as with the singularities of the sheaf of coefficients $F$ (whose class is $x$), so as to ``collect" a cycle on $X$ with coefficients in $\text{K}_\cdot(\Lambda)$. This would fit in the circle of ideas which I had introduced in 1957 with the coherent Riemann-Roch theorem, where I notably computed self-intersections, without quite ``moving around" the cycle under consideration. An initial obvious step (obtained by immersing $X$ in an $S$-scheme) would be to reduce to the case where $X$ is a closed subscheme of a regular $S$-scheme\todo{make sure this is what Grothendieck meant}.
+
+The idea that it should be possible to develop a \textbf{singular} (coherent) Riemann-Roch theorem was already familiar to me, although I couldn't say for how long, but I never seriously put it to the test. It was in part this idea (other than the analogy with the ``cohomology, homology, cap-product" formalism) which had led me to systematically introduce $\text{K}_\cdot(X)$, $\text{K}^\cdot(X)$, $\text{A}_\cdot(X)$, and $\text{A}^\cdot(X)$  in SGA 6 (in 1966/67), instead of choosing to work only with $\text{K}^\cdot(X)$. I can't remember if I had thought about something along those lines in the SGA 5 seminar in 1966, or if I made mention of it in my talk. As my handwritten notes have disappeared (perhaps while moving?), I may never know...
+
+(June 7) In reading through MacPherson's article, I was stricken by the fact that the word ``Riemann-Roch" is never used - this is also the reason why I did not immediately recognize the conjecture which I had made in the SGA 5 seminar in 1966, the latter having always been (and still is) a ``Riemann-Roch"-type theorem in my view. It seems that at the time of writing his article, MacPherson did not notice this evident filiation. I am guessing that the reason behind this is that Deligne, who circulated this conjecture in the form he liked best after my departure, took care to ``erase", insofar as possible, the evident filiation with the Riemann-Roch-Grothendieck theorem. I think I understand his motivation behind this. On the one hand, this weakens the link between the conjecture and myself, making more plausible\marginpar{p. 367}  the name currently under circulation, ``Deligne-Grothendieck conjecture". (N.B. I ignore where this conjecture is currently circulating in the scheme context, and is so, I would be curious to know under which name). But the deeper reason seems to be his obsession with denying and destructing, to the extent possible, the fundamental unity of my work and mathematical vision\footnote{(*)}(*). This is a striking example of the way in which a fixed idea entirely foreign to any mathematical motivation can obscure (if not downright seal) what I have called the ``sane mathematical instinct" of a mathematician whose abilities are nonetheless exceptional. Such a mathematical instinct would not fail to perceive the analogy between the two statements, one ``continuous" and the other ``discrete", of a ``single" Riemann-Roch theorem, an analogy which I had of course spelled out during my talk. As I indicated yesterday, this filiation will probably be confirmed in the near future by a formal statement (conjectured by Zoghman Mebkhout), at least in the complex analytic context, enabling us to deduce both theorems from a common result. Clearly, given Deligne's ``grave-digging" attitude towards the Riemann-Roch theorem\footnote{(**)}(**), he was not positioned to discover the common statement connecting them in the analytic context, nor to think to look for an analogous statement in the general context of schemes. In the same way, this attitude prevented him from unearthing the fruitful viewpoint on $\mathcal{D}$-modules in studying the cohomology theory of algebraic varieties, which followed too naturally from a circle of ideas which needed to be buried; neither was he able to recognize for years Mebkhout's fertile work, which succeeded where he had failed. 
+
+
+
+
+
+
+
+
+
+\subnote{87$_2$}
+
+\subnote{87$_3$}
+
+\subnote{87$_4$}
+
+\subsection{The remains}
+
+\nnote{88}
+
+\subsection{... and the body}
+
+\nnote{89}
+
+\subsection{The heir}
+
+\nnote{90}
+
+\subsection{The co-heirs}
+
+\nnote{91}
+
+\subnote{91$_1$}
+
+\subnote{91$_2$}
+
+\subnote{91$_3$}
+
+\subnote{91$_4$}
+
+\subsection{... and the chainsaw}
+
+\nnote{92}
+
+
+
+
+
+
+
+%\end{document}
