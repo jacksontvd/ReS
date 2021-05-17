@@ -1,4 +1,4 @@
-\begin{comment}
+% \begin{comment}
 \documentclass{book}
 \usepackage{master}
 \usepackage{changepage}
@@ -33,8 +33,7 @@
 {}{Note }{}{\titlerule*[1pc]{.}\contentspage}
 
 \newtheorem{remark}{Remark}
-\theoremstyle{nonumberbreak}
-\newtheorem{remarknn}{Remark}
+\newtheorem*{remark*}{Remark}
 
 \begin{document}
 % print table of contents with notes and subnotes
@@ -44,7 +43,7 @@
  \printcontents[chapters]{}{0}{}
 
 \setcounter{chapter}{14}
-\end{comment}
+% \end{comment}
 
 \chapter{C) High Society}
 
@@ -164,11 +163,14 @@ Of course, we are supposing that we are working in a context in which there is a
 
 Already in the case where $X$ is a smooth algebraic curve over an algebraically closed field, computing $\text{ch}_X$ involves studying delicate Artin-Serre-Swan-type local invariants. This hints at the depth of the general conjecture, whose pursuit would involve understanding the analogues of these invariants in higher dimensions. 
 
-\textbf{Remark.}  Writing $\text{K}^{\cdot}(X, \Lambda)$ to denote the ``Grothendieck ring" associated to constructible complexes of \'etale sheaves of $\Lambda$-modules of finite Tor-dimension (which acts on $\text{K}_{\cdot}(X, \Lambda)$ when $\Lambda$ is commutative...), we also expect to have a homomorphism
+% \textbf{Remark.}
+\begin{remark*}
+Writing $\text{K}^{\cdot}(X, \Lambda)$ to denote the ``Grothendieck ring" associated to constructible complexes of \'etale sheaves of $\Lambda$-modules of finite Tor-dimension (which acts on $\text{K}_{\cdot}(X, \Lambda)$ when $\Lambda$ is commutative...), we also expect to have a homomorphism
 \begin{equation}\label{chern1.2} 
 \text{ch}_X: \text{K}^{\cdot}(X, \Lambda) \to \text{A}(X) \otimes_{\mathbb{Z}} \text{K}^\cdot(\Lambda), 
 \end{equation}
 giving rise (mutatis mutandis) to the same Riemann-Roch formula.
+\end{remark*}
 
 \marginpar{p. 364}Now, let $\text{Cons}(X)$ denote the ring of constructible integral-valued functions on $X$. We can define more or less tautologically canonical homomorphisms:
 \begin{equation}\label{chern2.1} 
@@ -306,6 +308,4 @@ The Dreamer disagreed with the image I had of the ``slaughter" and of the sharin
 
 
 
-%\end{document}
-
-
+\end{document}
