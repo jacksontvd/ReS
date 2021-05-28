@@ -1,2 +1,87 @@
-\chapter{The deceased (still not dead\ldots)}
+\begin{comment}
+\documentclass{book}
+\usepackage{master}
+\usepackage{changepage}
+\newcommand{\rec}{$\text{R\'ecoltes et Semailles}$}
+\newcommand{\no}{n$^\circ$}
+\hfuzz = 100pt
 
+% NOTE and SUBNOTE FORMATTING
+\usepackage{titlesec}
+\usepackage[dotinlabels]{titletoc}
+
+% define `note'
+\titleclass{\nnote}{straight}[\section]
+\newcounter{nnote}
+\renewcommand{\thennote}{\thesection.\arabic{nnote}}
+\titlespacing*{\nnote}{0pt}{3.5ex plus 1ex minus .2ex}{1ex plus .2ex}
+\titleformat{\nnote}[runin]{\bfseries }{\bfseries Note }{0pt}{}[]
+
+% define `subnote'
+\titleclass{\subnote}{straight}[\section]
+\newcounter{subnote}
+\renewcommand{\thesubnote}{\thesection.\arabic{subnote}}
+\titlespacing*{\subnote}{0pt}{3.5ex plus 1ex minus .2ex}{1ex plus .2ex}
+\titleformat{\subnote}[runin]{\bfseries }{\bfseries Note }{0pt}{}[]
+
+% the first optional arg sets the size of the indentation in the TOC
+\titlecontents{nnote}[9em]
+{}{Note }{}{\titlerule*[1pc]{.}\contentspage}
+
+% the first optional arg sets the size of the indentation in the TOC
+\titlecontents{subnote}[11em]
+{}{Note }{}{\titlerule*[1pc]{.}\contentspage}
+
+\newtheorem{remark}{Remark}
+\newtheorem*{remark*}{Remark}
+
+\begin{document}
+
+% print table of contents with notes and subnotes
+ %\setcounter{tocdepth}{5}
+ %\setcounter{secnumdepth}{5}
+ %\startcontents[chapters]
+ %\printcontents[chapters]{}{0}{}
+
+\setcounter{chapter}{16}
+
+\end{comment}
+
+\chapter{The defunct (who lives...)}
+
+\section{The incident - or body and mind}
+
+\nnote{98}\label{note:98}
+
+\section{The trap - or ease and exhaustion}
+
+\nnote{99}\label{note:99} (September 23) I had to force myself to stop working yesterday night, so as to avoid following my natural course until two or three a.m. and thereby becoming caught in a cycle that I know only too well. I felt fresh and receptive, and had I followed my natural inclination, I could have kept going until sunrise! The trap laid by intellectual work - at least when such work is pursued with passion, in a subject in which we eventually feel like fish in water, as a result of a prolonged familiarity - is that it is so incredibly \textbf{easy}. We pull, and pull, and it keeps coming; at most, we occasionally feel some amount of effort, some friction, indicating a little bit of resistance...
+
+Yet, I remember the persistent feeling of heaviness and gravity which I used to feel during my early years as a mathematician, a feeling which I had to surmount through obstinate effort, only to be left with a sensation of fatigue. This mostly corresponded to a period in my life during which I was working with an incomplete, or even inadequate, toolbox; as well as to a later period during which I had to more or less laboriously acquire new tools ``left and right", under the pressure of an environment (essentially, that of the Bourbaki group) where they were routinely used - and I had to do so even though I did not perceive these tools' ``raison d'\^etre" until a later point, up to several years later in some cases. I have spoken on occasion about these rather arduous years (see ``The welcome stranger" s.9, and ``One hundred irons in the fire - or: there is no use in being stuck!", note n$^o$10) in the first part of R\'ecoltes et Semailles. This period mostly took place between the years 1945 and 1955, coinciding with my\marginpar{p. 429} time as a functional analyst. (It seems to me that the students whom I later supervised, between 1960 and 1970, experienced much less resistance than I did regarding having to learn new things without sufficient motivation and to absorb notions and techniques based on the elders' authority, taken on faith - in fact, I did not perceive any resistance at all.)
+
+Coming back to my original point, it was from the year 1955 onward that I started having the impression that I was ``flying" - in that doing mathematics felt like play, unencumbered by any sensation of effort - the same way my elders did, exhibiting a quasi-miraculous ease for which I had once envied them, considering that such facility was out of reach for my modest and heavy person! Today, I understand that such a ``facility" is not a privilege one acquires as some exceptional gift (as seemed to be the case for certain individuals, at a time when such a ``gift" appeared to be entirely absent in my case); rather, this facility emerges on its own as the fruit of the union of a passionate interest for a given subject (such as mathematics) together with a more or less lengthy familiarization with said subject. If a ``gift" does play a role in the appearance of such ease, it is through the length of time it takes to reach perfect fluency in one's work on a given subject\footnote{(*)}(*), something which can vary from one person to the next (as well as from one occasion to the next for the same individual, admittedly...).
+
+The fact remains that the more time passes - the more years I have accumulated as a mathematician, the more I experience this feeling of ``ease" when doing mathematics - the sensation that things are pleading to be revealed to us, if we only take the time to look at them and inspect them a little bit. This ease is not a matter of technical virtuosity - it is clear to me that, in this respect, I am in much worse shape than I was in 1970, at the time when I ``left math". Since then, I have mostly had the occasion to unlearn what I had learned, and I only ``do math" sporadically, on my own, in a very different spirit and on themes different from the ones that I used to work on (at least at first glance). I am also not saying that I would need only assign myself a given famous problem (such as, say, Fermat's last theorem, the Riemann hypothesis, or the Poincar\'e conjecture) so as to launch on a geodesic path towards its solution, in a year or two, or even\footnote{}\marginpar{p. 430} three! The ease that I am speaking of does not apply to a process whereby we set out to reach a given \textbf{goal}, fixed ahead of time - such as proving some conjecture or finding a counter-example... Rather, it applies to excursions into the unknown, following a direction which some obscure instinct tells us will be fruitful, and supported by the inner confidence, never misplaced, that each day and each hour of our journey shall bring us its own fresh harvest of new understandings. \textbf{Which} understanding we shall reach in the morrow, or even in the following hour, is something we can indeed anticipate - yet, it is the constant rectification of this ``anticipation", and the suspense that results, which constantly draw us forward, as the very things which we are probing are inviting us to come closer. What is eventually understood always surpasses what had been anticipated in terms of precision, flavor, and richness; at which point the known readily turns into a new starting point and as raw material allowing us to form a renewed anticipation, causing us to launch further into the unknown that is avidly awaiting to become understood. In this game of discovery, the \textbf{direction} which we follow at every moment is known, but the \textbf{goal} is forgotten - supposing we had even started with a goal which we intended to reach. This ``goal" actually constituted a \textbf{starting point}, issued from some combination of our ambition and ignorance; it served its purpose by motivating ``the boss", fixing an initial direction, and setting the game in action; but the game itself has no use for a goal. As long as the journey we undertake lasts for longer than a day or two, so that we are in it for the long haul, the things which will be revealed to us over the course of days and months, and the places we will be reaching at the term of a series of unknown twists and turns, are a complete mystery to us as travelers; in fact, they form such a distant and inaccessible mystery so as to be immaterial! If the traveler does look out at the horizon, it is not to guess what the unpredictable endpoint shall be, and even less so to decide on a chosen endpoint, but rather to take stock of where he currently stands, and to choose, among the directions available to him in the continuation of his journey, the one which he feels to be most burning...
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+%\end{document}
